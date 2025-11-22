@@ -1,0 +1,50 @@
+.phase-detail {
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+}
+
+.phase-title {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #10b981;
+}
+
+.phase-section {
+  margin-bottom: 3rem;
+}
+
+.phase-section h3 {
+  font-size: 1.5rem;
+  color: #6ee7b7;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phase-section h3::before {
+  content: '';
+  width: 4px;
+  height: 1.5rem;
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .phase-detail {
+    padding: 1rem;
+  }
+
+  .phase-title {
+    font-size: 1.5rem;
+  }
+
+  .phase-section h3 {
+    font-size: 1.25rem;
+  }
+}

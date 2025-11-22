@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Border Rectangle -->
+  <rect x="5" y="5" width="390" height="110" fill="none" stroke="#1e3a8a" stroke-width="3" rx="4"/>
+
+  <!-- Inner Rectangle for background -->
+  <rect x="10" y="10" width="380" height="100" fill="#ffffff"/>
+
+  <!-- SAVAANT Text -->
+  <text x="200" y="75" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#1e3a8a" text-anchor="middle" letter-spacing="2">SAVAANT</text>
+
+  <!-- Registered trademark symbol -->
+  <circle cx="375" cy="95" r="8" fill="none" stroke="#1e3a8a" stroke-width="1.5"/>
+  <text x="375" y="98" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1e3a8a" text-anchor="middle">R</text>
+</svg>

@@ -1,0 +1,968 @@
+{
+  "valueStream": {
+    "name": "Product Development Value Stream",
+    "description": "Complete classification of all 8 phases in the Product Development Value Stream",
+    "phases": [
+      {
+        "id": 1,
+        "name": "Business Discovery & Requirements Definition",
+        "metadata": {
+          "phaseOwner": "Product Owner",
+          "duration": "1-2 weeks",
+          "valueAddTime": "60%",
+          "keyStakeholders": [
+            "Product Owner",
+            "Operating Officer",
+            "Customer/Users",
+            "All Stakeholders"
+          ],
+          "firstActor": "Product Owner",
+          "nextActor": "Technical Program Manager (leads Phase 2)"
+        },
+        "inputs": [
+          {
+            "input": "Business opportunity or customer problem",
+            "producedBy": "Operating Officer / Business Leadership"
+          },
+          {
+            "input": "Market research and competitive analysis",
+            "producedBy": "Product Owner / Market Research Team"
+          },
+          {
+            "input": "Strategic business objectives",
+            "producedBy": "Operating Officer"
+          },
+          {
+            "input": "Budget constraints",
+            "producedBy": "Operating Officer / Finance"
+          },
+          {
+            "input": "Customer feedback/requests",
+            "producedBy": "Customer/Users"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Business Requirements Document (BRD) with sign-off",
+            "producedBy": "Product Owner"
+          },
+          {
+            "output": "User stories with acceptance criteria",
+            "producedBy": "Product Owner"
+          },
+          {
+            "output": "Success metrics and KPIs defined",
+            "producedBy": "Product Owner + Operating Officer"
+          },
+          {
+            "output": "Budget allocation approved",
+            "producedBy": "Operating Officer"
+          },
+          {
+            "output": "Risk register initiated",
+            "producedBy": "Product Owner + TPM"
+          },
+          {
+            "output": "Prioritized feature backlog",
+            "producedBy": "Product Owner"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "BRD approved by Product Owner, Operating Officer, and key stakeholders",
+            "approver": "Product Owner, Operating Officer, Key Stakeholders"
+          },
+          {
+            "criteria": "Success metrics defined and measurable",
+            "approver": "Product Owner, Operating Officer"
+          },
+          {
+            "criteria": "Budget approved",
+            "approver": "Operating Officer"
+          },
+          {
+            "criteria": "Scope baseline established",
+            "approver": "Product Owner, PMO"
+          },
+          {
+            "criteria": "High-priority risks identified",
+            "approver": "Product Owner, TPM"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Time to Requirements Sign-off",
+            "target": "< 2 weeks"
+          },
+          {
+            "metric": "Requirements Stability",
+            "target": "% unchanged after baseline"
+          },
+          {
+            "metric": "Stakeholder Engagement",
+            "target": "# of participants"
+          },
+          {
+            "metric": "Clarity Score",
+            "target": "% meeting INVEST criteria"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Technical Program Planning",
+        "metadata": {
+          "phaseOwner": "Technical Program Manager (TPM)",
+          "duration": "1-2 weeks",
+          "valueAddTime": "70%",
+          "keyStakeholders": [
+            "Technical Program Manager",
+            "PMO",
+            "All Stakeholders"
+          ],
+          "firstActor": "Technical Program Manager",
+          "nextActor": "Architecture Team (leads Phase 3)"
+        },
+        "inputs": [
+          {
+            "input": "Approved Business Requirements Document",
+            "producedBy": "Product Owner (from Phase 1)"
+          },
+          {
+            "input": "Success metrics and KPIs",
+            "producedBy": "Product Owner (from Phase 1)"
+          },
+          {
+            "input": "Budget and resource constraints",
+            "producedBy": "Operating Officer (from Phase 1)"
+          },
+          {
+            "input": "Organizational capacity data",
+            "producedBy": "PMO / Resource Management"
+          },
+          {
+            "input": "Dependency map from previous projects",
+            "producedBy": "PMO / Technical Program Manager"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Program timeline with critical path identified",
+            "producedBy": "Technical Program Manager"
+          },
+          {
+            "output": "Work breakdown structure (WBS)",
+            "producedBy": "Technical Program Manager"
+          },
+          {
+            "output": "Resource allocation plan (people, budget, tools)",
+            "producedBy": "Technical Program Manager + PMO"
+          },
+          {
+            "output": "RACI matrix for all activities",
+            "producedBy": "Technical Program Manager"
+          },
+          {
+            "output": "Risk mitigation plan with owners",
+            "producedBy": "Technical Program Manager"
+          },
+          {
+            "output": "Communication plan with stakeholder touchpoints",
+            "producedBy": "Technical Program Manager"
+          },
+          {
+            "output": "Dependency matrix",
+            "producedBy": "Technical Program Manager"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "Program roadmap approved by TPM, PMO, and Product Owner",
+            "approver": "TPM, PMO, Product Owner"
+          },
+          {
+            "criteria": "Critical path identified with buffer time",
+            "approver": "TPM, PMO"
+          },
+          {
+            "criteria": "All dependencies documented with mitigation plans",
+            "approver": "TPM, PMO"
+          },
+          {
+            "criteria": "Resource commitments secured",
+            "approver": "PMO, Resource Managers"
+          },
+          {
+            "criteria": "Risk response strategies defined",
+            "approver": "TPM, PMO"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Planning Accuracy",
+            "target": "< 15% variance"
+          },
+          {
+            "metric": "Resource Utilization",
+            "target": "% of resources available"
+          },
+          {
+            "metric": "Dependency Risk Score",
+            "target": "# of critical dependencies"
+          },
+          {
+            "metric": "Schedule Risk",
+            "target": "Days of buffer in critical path"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Architecture & Technical Design",
+        "metadata": {
+          "phaseOwner": "Architecture Team",
+          "duration": "2-3 weeks",
+          "valueAddTime": "65%",
+          "keyStakeholders": [
+            "Architecture Team",
+            "Security Team",
+            "Development Team",
+            "Operating Officer"
+          ],
+          "firstActor": "Architecture Team",
+          "nextActor": "Development Team (leads Phase 4)"
+        },
+        "inputs": [
+          {
+            "input": "Business Requirements Document",
+            "producedBy": "Product Owner (from Phase 1)"
+          },
+          {
+            "input": "Program timeline and milestones",
+            "producedBy": "TPM (from Phase 2)"
+          },
+          {
+            "input": "Current system architecture documentation",
+            "producedBy": "Architecture Team / Previous Projects"
+          },
+          {
+            "input": "Non-functional requirements (NFRs)",
+            "producedBy": "Product Owner + Architecture Team"
+          },
+          {
+            "input": "Technology standards and guidelines",
+            "producedBy": "Architecture Team / Enterprise Architecture"
+          },
+          {
+            "input": "Integration requirements",
+            "producedBy": "Product Owner + Architecture Team"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "High-Level Design (HLD) document",
+            "producedBy": "Architecture Team"
+          },
+          {
+            "output": "Architecture Decision Records (ADRs)",
+            "producedBy": "Architecture Team"
+          },
+          {
+            "output": "System integration diagram",
+            "producedBy": "Architecture Team"
+          },
+          {
+            "output": "Data flow diagrams",
+            "producedBy": "Architecture Team"
+          },
+          {
+            "output": "API contracts and interface definitions",
+            "producedBy": "Architecture Team"
+          },
+          {
+            "output": "Non-functional requirements specification",
+            "producedBy": "Architecture Team + Security Team"
+          },
+          {
+            "output": "Technology stack selection with rationale",
+            "producedBy": "Architecture Team"
+          },
+          {
+            "output": "Proof-of-concept results (if applicable)",
+            "producedBy": "Architecture Team + Development Team"
+          },
+          {
+            "output": "Security and compliance review report",
+            "producedBy": "Security Team"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "HLD reviewed and approved by Architecture Review Board",
+            "approver": "Architecture Review Board"
+          },
+          {
+            "criteria": "All integration points identified and agreed upon",
+            "approver": "Architecture Team, Development Team"
+          },
+          {
+            "criteria": "NFRs defined and achievable",
+            "approver": "Architecture Team, Development Team"
+          },
+          {
+            "criteria": "Security review completed with no critical gaps",
+            "approver": "Security Team"
+          },
+          {
+            "criteria": "Technology choices aligned with enterprise standards",
+            "approver": "Architecture Team, Operating Officer"
+          },
+          {
+            "criteria": "Design alternatives evaluated with documented trade-offs",
+            "approver": "Architecture Team"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Design Review Cycles",
+            "target": "≤ 2 iterations"
+          },
+          {
+            "metric": "Architecture Debt",
+            "target": "Tech debt introduced vs. retired"
+          },
+          {
+            "metric": "Design Coverage",
+            "target": "% of requirements covered"
+          },
+          {
+            "metric": "NFR Compliance",
+            "target": "% of NFRs addressed"
+          },
+          {
+            "metric": "Integration Risk",
+            "target": "# of new integration points"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Detailed Design & Implementation Planning",
+        "metadata": {
+          "phaseOwner": "Development Team",
+          "duration": "1-2 weeks",
+          "valueAddTime": "75%",
+          "keyStakeholders": [
+            "Development Team (Tech Lead)",
+            "QA/Test Team",
+            "DevOps Team"
+          ],
+          "firstActor": "Development Team (Tech Lead)",
+          "nextActor": "Development Team continues (leads Phase 5)"
+        },
+        "inputs": [
+          {
+            "input": "High-Level Design document",
+            "producedBy": "Architecture Team (from Phase 3)"
+          },
+          {
+            "input": "Architecture Decision Records",
+            "producedBy": "Architecture Team (from Phase 3)"
+          },
+          {
+            "input": "API contracts and interface definitions",
+            "producedBy": "Architecture Team (from Phase 3)"
+          },
+          {
+            "input": "Program timeline",
+            "producedBy": "TPM (from Phase 2)"
+          },
+          {
+            "input": "Development environment setup",
+            "producedBy": "DevOps Team"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Low-Level Design (LLD) with component details",
+            "producedBy": "Development Team (Tech Lead)"
+          },
+          {
+            "output": "Implementation plan with sprint breakdown",
+            "producedBy": "Development Team (Tech Lead)"
+          },
+          {
+            "output": "Effort estimates by feature/story",
+            "producedBy": "Development Team"
+          },
+          {
+            "output": "Testing strategy document",
+            "producedBy": "QA/Test Team + Development Team"
+          },
+          {
+            "output": "Code review checklist",
+            "producedBy": "Development Team (Tech Lead)"
+          },
+          {
+            "output": "CI/CD pipeline configuration",
+            "producedBy": "DevOps Team"
+          },
+          {
+            "output": "Technical spike results (if conducted)",
+            "producedBy": "Development Team"
+          },
+          {
+            "output": "Development environment runbook",
+            "producedBy": "DevOps Team + Development Team"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "LLD reviewed and approved by Tech Lead and Architects",
+            "approver": "Tech Lead, Architecture Team"
+          },
+          {
+            "criteria": "All user stories estimated and sprint-ready",
+            "approver": "Tech Lead, Product Owner"
+          },
+          {
+            "criteria": "Testing strategy approved by QA",
+            "approver": "QA/Test Team"
+          },
+          {
+            "criteria": "Development environment validated",
+            "approver": "DevOps Team, Development Team"
+          },
+          {
+            "criteria": "CI/CD pipeline operational",
+            "approver": "DevOps Team"
+          },
+          {
+            "criteria": "Definition of Done (DoD) agreed upon",
+            "approver": "Development Team, Product Owner"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Estimation Accuracy",
+            "target": "± 20% variance"
+          },
+          {
+            "metric": "Test Coverage Target",
+            "target": "% code coverage goal"
+          },
+          {
+            "metric": "Sprint Readiness",
+            "target": "% of stories meeting DoR"
+          },
+          {
+            "metric": "Technical Spike Success",
+            "target": "% reducing uncertainty"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Development & Quality Assurance",
+        "metadata": {
+          "phaseOwner": "Development Team",
+          "duration": "4-8 weeks (iterative sprints)",
+          "valueAddTime": "80%",
+          "keyStakeholders": [
+            "Development Team",
+            "QA/Test Team",
+            "Product Owner",
+            "Architecture Team"
+          ],
+          "firstActor": "Development Team",
+          "nextActor": "Rollout Team (leads Phase 6)"
+        },
+        "inputs": [
+          {
+            "input": "Low-Level Design document",
+            "producedBy": "Development Team (from Phase 4)"
+          },
+          {
+            "input": "Sprint-ready user stories",
+            "producedBy": "Product Owner + Development Team (from Phase 4)"
+          },
+          {
+            "input": "Test plan and test cases",
+            "producedBy": "QA/Test Team (from Phase 4)"
+          },
+          {
+            "input": "CI/CD pipeline ready",
+            "producedBy": "DevOps Team (from Phase 4)"
+          },
+          {
+            "input": "Definition of Done",
+            "producedBy": "Development Team + Product Owner (from Phase 4)"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Working software (potentially shippable increments)",
+            "producedBy": "Development Team"
+          },
+          {
+            "output": "Unit test suite with coverage reports",
+            "producedBy": "Development Team"
+          },
+          {
+            "output": "Integration test suite",
+            "producedBy": "Development Team + QA/Test Team"
+          },
+          {
+            "output": "Code review sign-offs",
+            "producedBy": "Development Team (Tech Lead)"
+          },
+          {
+            "output": "Defect reports and resolution logs",
+            "producedBy": "QA/Test Team"
+          },
+          {
+            "output": "Sprint retrospective notes",
+            "producedBy": "Development Team + Scrum Master"
+          },
+          {
+            "output": "Updated technical documentation",
+            "producedBy": "Development Team"
+          },
+          {
+            "output": "Demo recordings for stakeholder review",
+            "producedBy": "Development Team + Product Owner"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "All user stories meet Definition of Done",
+            "approver": "Product Owner, Tech Lead"
+          },
+          {
+            "criteria": "Code coverage meets target (> 80%)",
+            "approver": "Tech Lead, QA/Test Team"
+          },
+          {
+            "criteria": "No critical or high-priority defects open",
+            "approver": "QA/Test Team, Product Owner"
+          },
+          {
+            "criteria": "Code review approval for all changes",
+            "approver": "Tech Lead, Senior Developers"
+          },
+          {
+            "criteria": "Product Owner acceptance of all features",
+            "approver": "Product Owner"
+          },
+          {
+            "criteria": "Performance testing passed for NFRs",
+            "approver": "QA/Test Team, Architecture Team"
+          },
+          {
+            "criteria": "Security scanning completed with no critical issues",
+            "approver": "Security Team"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Sprint Velocity",
+            "target": "Story points per sprint"
+          },
+          {
+            "metric": "Defect Density",
+            "target": "Defects per 1000 LOC"
+          },
+          {
+            "metric": "Code Coverage",
+            "target": "> 80%"
+          },
+          {
+            "metric": "First-Time Pass Rate",
+            "target": "% stories accepted without rework"
+          },
+          {
+            "metric": "Cycle Time",
+            "target": "Days from story start to done"
+          },
+          {
+            "metric": "Code Review Time",
+            "target": "Hours from PR to approval"
+          },
+          {
+            "metric": "Build Success Rate",
+            "target": "% of CI builds passing"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Pre-Production Validation & Rollout Planning",
+        "metadata": {
+          "phaseOwner": "Rollout Team / Release Manager",
+          "duration": "1-2 weeks",
+          "valueAddTime": "65%",
+          "keyStakeholders": [
+            "Rollout Team",
+            "Operations/SRE Team",
+            "Customer Support",
+            "All Stakeholders"
+          ],
+          "firstActor": "Rollout Team / Release Manager",
+          "nextActor": "Operations Team (leads Phase 7)"
+        },
+        "inputs": [
+          {
+            "input": "Working software from development",
+            "producedBy": "Development Team (from Phase 5)"
+          },
+          {
+            "input": "Test results and quality reports",
+            "producedBy": "QA/Test Team (from Phase 5)"
+          },
+          {
+            "input": "Production environment specifications",
+            "producedBy": "Operations/SRE Team"
+          },
+          {
+            "input": "User documentation",
+            "producedBy": "Development Team / Technical Writers"
+          },
+          {
+            "input": "Training materials (if needed)",
+            "producedBy": "Customer Support / Training Team"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Rollout plan with phased deployment schedule",
+            "producedBy": "Rollout Team / Release Manager"
+          },
+          {
+            "output": "Rollback plan with triggers and procedures",
+            "producedBy": "Rollout Team / Operations Team"
+          },
+          {
+            "output": "Communication plan (internal and external)",
+            "producedBy": "Rollout Team / Product Owner"
+          },
+          {
+            "output": "Training materials and user guides",
+            "producedBy": "Customer Support / Training Team"
+          },
+          {
+            "output": "Runbook for operations team",
+            "producedBy": "Operations/SRE Team + Development Team"
+          },
+          {
+            "output": "Monitoring dashboard configuration",
+            "producedBy": "Operations/SRE Team"
+          },
+          {
+            "output": "Incident response plan",
+            "producedBy": "Operations/SRE Team + Development Team"
+          },
+          {
+            "output": "Go-live checklist",
+            "producedBy": "Rollout Team"
+          },
+          {
+            "output": "Success criteria with measurable targets",
+            "producedBy": "Rollout Team + Product Owner"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "Rollout plan approved by all stakeholders",
+            "approver": "All Stakeholders, Operating Officer"
+          },
+          {
+            "criteria": "Production environment validated and ready",
+            "approver": "Operations/SRE Team"
+          },
+          {
+            "criteria": "Monitoring and alerting configured",
+            "approver": "Operations/SRE Team"
+          },
+          {
+            "criteria": "Rollback plan tested and validated",
+            "approver": "Operations/SRE Team, Rollout Team"
+          },
+          {
+            "criteria": "Training completed for operations and support",
+            "approver": "Customer Support Manager"
+          },
+          {
+            "criteria": "Go/no-go checklist 100% complete",
+            "approver": "Rollout Team, All Stakeholders"
+          },
+          {
+            "criteria": "Communication sent to all affected parties",
+            "approver": "Rollout Team, Product Owner"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Deployment Readiness Score",
+            "target": "% of checklist complete"
+          },
+          {
+            "metric": "Rollback Time",
+            "target": "< 30 minutes"
+          },
+          {
+            "metric": "Training Completion",
+            "target": "% of staff trained"
+          },
+          {
+            "metric": "Environment Parity",
+            "target": "% match staging-prod"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Production Deployment & Monitoring",
+        "metadata": {
+          "phaseOwner": "Rollout Team / Operations",
+          "duration": "1-2 days (deployment) + 2-4 weeks (stabilization)",
+          "valueAddTime": "50% (deployment) / 90% (monitoring)",
+          "keyStakeholders": [
+            "Rollout Team",
+            "Operations/SRE",
+            "Development Team (On-call)",
+            "Product Owner",
+            "Customer Support"
+          ],
+          "firstActor": "Rollout Team / Operations",
+          "nextActor": "Product Owner + TPM (leads Phase 8)"
+        },
+        "inputs": [
+          {
+            "input": "Approved rollout plan",
+            "producedBy": "Rollout Team (from Phase 6)"
+          },
+          {
+            "input": "Production-ready artifacts",
+            "producedBy": "Development Team (from Phase 5)"
+          },
+          {
+            "input": "Go-live approval from go/no-go meeting",
+            "producedBy": "All Stakeholders (from Phase 6)"
+          },
+          {
+            "input": "Monitoring dashboards configured",
+            "producedBy": "Operations/SRE Team (from Phase 6)"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Deployment report with timeline and issues",
+            "producedBy": "Rollout Team / Operations Team"
+          },
+          {
+            "output": "Production validation test results",
+            "producedBy": "QA/Test Team + Operations Team"
+          },
+          {
+            "output": "Performance metrics (latency, throughput, errors)",
+            "producedBy": "Operations/SRE Team"
+          },
+          {
+            "output": "User adoption metrics",
+            "producedBy": "Product Owner + Analytics Team"
+          },
+          {
+            "output": "Incident reports (if any)",
+            "producedBy": "Operations/SRE Team"
+          },
+          {
+            "output": "Lessons learned document",
+            "producedBy": "Rollout Team + All Stakeholders"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "Deployment completed successfully",
+            "approver": "Rollout Team, Operations Team"
+          },
+          {
+            "criteria": "All smoke tests passing in production",
+            "approver": "QA/Test Team, Operations Team"
+          },
+          {
+            "criteria": "No critical incidents in first 24 hours",
+            "approver": "Operations/SRE Team, Product Owner"
+          },
+          {
+            "criteria": "Performance metrics within acceptable ranges",
+            "approver": "Operations/SRE Team, Architecture Team"
+          },
+          {
+            "criteria": "User adoption tracking enabled",
+            "approver": "Product Owner, Analytics Team"
+          },
+          {
+            "criteria": "Support team reports no major issues",
+            "approver": "Customer Support Manager"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "Deployment Success Rate",
+            "target": "% without rollback"
+          },
+          {
+            "metric": "Mean Time to Deploy",
+            "target": "Time from start to completion"
+          },
+          {
+            "metric": "Mean Time to Detect",
+            "target": "Time to detect issues"
+          },
+          {
+            "metric": "Mean Time to Recover",
+            "target": "Time to resolve issues"
+          },
+          {
+            "metric": "Error Rate",
+            "target": "Errors per 1000 requests"
+          },
+          {
+            "metric": "Latency",
+            "target": "P50, P95, P99 response times"
+          },
+          {
+            "metric": "Availability",
+            "target": "System uptime %"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Post-Implementation Review & Optimization",
+        "metadata": {
+          "phaseOwner": "Product Owner + TPM",
+          "duration": "Ongoing (first review at 2-4 weeks post-launch)",
+          "valueAddTime": "60%",
+          "keyStakeholders": [
+            "Product Owner",
+            "TPM",
+            "Operating Officer",
+            "Development Team",
+            "All Stakeholders"
+          ],
+          "firstActor": "Product Owner + TPM",
+          "nextActor": "(Cycle can restart at Phase 1 for next iteration/feature)"
+        },
+        "inputs": [
+          {
+            "input": "Production metrics and performance data",
+            "producedBy": "Operations/SRE Team (from Phase 7)"
+          },
+          {
+            "input": "User feedback and support tickets",
+            "producedBy": "Customer Support + Users (from Phase 7)"
+          },
+          {
+            "input": "Business metrics (KPIs defined in Phase 1)",
+            "producedBy": "Product Owner + Analytics Team"
+          },
+          {
+            "input": "Incident reports",
+            "producedBy": "Operations/SRE Team (from Phase 7)"
+          },
+          {
+            "input": "Lessons learned from all phases",
+            "producedBy": "All Teams (from all phases)"
+          }
+        ],
+        "outputs": [
+          {
+            "output": "Post-implementation review report",
+            "producedBy": "Product Owner + TPM"
+          },
+          {
+            "output": "KPI dashboard with actual vs. target",
+            "producedBy": "Product Owner + Analytics Team"
+          },
+          {
+            "output": "User feedback summary",
+            "producedBy": "Product Owner + Customer Support"
+          },
+          {
+            "output": "Lessons learned document",
+            "producedBy": "TPM + All Stakeholders"
+          },
+          {
+            "output": "Retrospective action items",
+            "producedBy": "TPM + Scrum Master"
+          },
+          {
+            "output": "Optimization backlog",
+            "producedBy": "Product Owner + Development Team"
+          },
+          {
+            "output": "Process improvement recommendations",
+            "producedBy": "TPM + PMO"
+          },
+          {
+            "output": "ROI analysis and business value report",
+            "producedBy": "Product Owner + Operating Officer"
+          }
+        ],
+        "exitCriteria": [
+          {
+            "criteria": "All success metrics measured and reported",
+            "approver": "Product Owner, Operating Officer"
+          },
+          {
+            "criteria": "Retrospective completed with all teams",
+            "approver": "TPM, All Team Leads"
+          },
+          {
+            "criteria": "Lessons learned documented and shared",
+            "approver": "TPM, PMO"
+          },
+          {
+            "criteria": "Follow-up actions prioritized and assigned",
+            "approver": "Product Owner, TPM"
+          },
+          {
+            "criteria": "Business value validated by Operating Officer",
+            "approver": "Operating Officer"
+          }
+        ],
+        "metrics": [
+          {
+            "metric": "KPI Achievement",
+            "target": "% of success metrics met"
+          },
+          {
+            "metric": "User Satisfaction",
+            "target": "NPS or CSAT score"
+          },
+          {
+            "metric": "Adoption Rate",
+            "target": "% of users actively using"
+          },
+          {
+            "metric": "Business Value",
+            "target": "Revenue impact / cost savings"
+          },
+          {
+            "metric": "Time to Value",
+            "target": "Days to measurable impact"
+          },
+          {
+            "metric": "Process Efficiency",
+            "target": "Actual vs. planned timeline/budget"
+          },
+          {
+            "metric": "Team Satisfaction",
+            "target": "Team health score"
+          }
+        ]
+      }
+    ]
+  }
+}
