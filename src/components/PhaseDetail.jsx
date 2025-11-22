@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import MetadataEditor from './MetadataEditor'
 import EditableTable from './EditableTable'
 import './PhaseDetail.css'
@@ -7,6 +7,13 @@ function PhaseDetail({ phase, onUpdate }) {
   const [localPhase, setLocalPhase] = useState(phase)
   const [isEditingTitle, setIsEditingTitle] = useState(false)
   const [titleInput, setTitleInput] = useState(phase.name)
+
+  // Update local state when phase prop changes (switching tabs)
+  useEffect(() => {
+    setLocalPhase(phase)
+    setTitleInput(phase.name)
+    setIsEditingTitle(false)
+  }, [phase])
 
   const handleTitleChange = () => {
     if (titleInput.trim() && titleInput !== localPhase.name) {

@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './MetadataEditor.css'
 
 function MetadataEditor({ metadata, onChange }) {
   const [localMetadata, setLocalMetadata] = useState(metadata)
   const [isEditingStakeholders, setIsEditingStakeholders] = useState(false)
   const [stakeholderInput, setStakeholderInput] = useState('')
+
+  // Update local state when metadata prop changes (switching phases)
+  useEffect(() => {
+    setLocalMetadata(metadata)
+    setIsEditingStakeholders(false)
+    setStakeholderInput('')
+  }, [metadata])
 
   const handleChange = (field, value) => {
     const updated = { ...localMetadata, [field]: value }

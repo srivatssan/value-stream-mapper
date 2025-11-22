@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './EditableTable.css'
 
 function EditableTable({ data, columns, onChange }) {
   const [localData, setLocalData] = useState(data)
   const [editingCell, setEditingCell] = useState(null)
+
+  // Update local state when data prop changes (switching phases)
+  useEffect(() => {
+    setLocalData(data)
+    setEditingCell(null)
+  }, [data])
 
   const handleCellChange = (rowIndex, columnKey, value) => {
     const updated = localData.map((row, idx) =>
