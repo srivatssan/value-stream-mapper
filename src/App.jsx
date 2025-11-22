@@ -68,7 +68,7 @@ function App() {
             onImport={handleImport}
           />
           <div className="logo-container">
-            <img src="/srignosis-logo.svg" alt="SriGnosis Logo" />
+            <img src={`${import.meta.env.BASE_URL}srignosis-logo.svg`} alt="SriGnosis Logo" />
           </div>
         </div>
       </header>
