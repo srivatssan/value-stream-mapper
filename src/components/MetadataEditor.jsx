@@ -37,6 +37,16 @@ function MetadataEditor({ metadata, onChange }) {
     <div className="metadata-editor">
       <h3>Phase Information</h3>
       <div className="metadata-grid">
+        <div className="metadata-field full-width">
+          <label>Phase Description</label>
+          <textarea
+            value={localMetadata.description || ''}
+            onChange={(e) => handleChange('description', e.target.value)}
+            placeholder="Describe what this phase is about..."
+            rows={3}
+          />
+        </div>
+
         <div className="metadata-field">
           <label>Phase Owner</label>
           <input

@@ -186,6 +186,12 @@ function Visualization({ data, initialFocusedPhaseId, onClearFocus }) {
           <div className="detail-content">
             <h2>Phase {selectedPhase.id}: {selectedPhase.name}</h2>
 
+            {selectedPhase.metadata.description && (
+              <div className="phase-description">
+                <p>{selectedPhase.metadata.description}</p>
+              </div>
+            )}
+
             <div className="stakeholder-tags">
               <strong>Key Stakeholders:</strong><br/>
               {selectedPhase.metadata.keyStakeholders.map((s, i) => (

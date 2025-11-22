@@ -7,6 +7,7 @@
         "id": 1,
         "name": "Business Discovery & Requirements Definition",
         "metadata": {
+          "description": "This phase focuses on understanding the business opportunity, customer needs, and defining clear requirements. The product owner works with stakeholders to translate business goals into actionable requirements.",
           "phaseOwner": "Product Owner",
           "duration": "1-2 weeks",
           "valueAddTime": "60%",
@@ -112,6 +113,7 @@
         "id": 2,
         "name": "Technical Program Planning",
         "metadata": {
+          "description": "This phase translates approved business requirements into a structured program plan with timelines, resources, and dependencies. The Technical Program Manager creates the roadmap and ensures all stakeholders are aligned on deliverables.",
           "phaseOwner": "Technical Program Manager (TPM)",
           "duration": "1-2 weeks",
           "valueAddTime": "70%",
@@ -220,6 +222,7 @@
         "id": 3,
         "name": "Architecture & Technical Design",
         "metadata": {
+          "description": "This phase establishes the technical foundation by designing system architecture, defining integration points, and making key technology decisions. The Architecture Team ensures the design meets both functional requirements and non-functional requirements like security, scalability, and performance.",
           "phaseOwner": "Architecture Team",
           "duration": "2-3 weeks",
           "valueAddTime": "65%",
@@ -349,6 +352,7 @@
         "id": 4,
         "name": "Detailed Design & Implementation Planning",
         "metadata": {
+          "description": "This phase breaks down the high-level architecture into detailed component designs and actionable implementation plans. The Development Team creates low-level designs, estimates effort, and establishes the testing strategy and CI/CD pipeline.",
           "phaseOwner": "Development Team",
           "duration": "1-2 weeks",
           "valueAddTime": "75%",
@@ -465,6 +469,7 @@
         "id": 5,
         "name": "Development & Quality Assurance",
         "metadata": {
+          "description": "This phase involves iterative development sprints where code is written, tested, and validated against requirements. The Development and QA teams work collaboratively to build potentially shippable increments with comprehensive test coverage.",
           "phaseOwner": "Development Team",
           "duration": "4-8 weeks (iterative sprints)",
           "valueAddTime": "80%",
@@ -598,6 +603,7 @@
         "id": 6,
         "name": "Pre-Production Validation & Rollout Planning",
         "metadata": {
+          "description": "This phase prepares for production deployment by creating comprehensive rollout and rollback plans, configuring monitoring, and training operations teams. The Rollout Team ensures all stakeholders are ready for a smooth go-live.",
           "phaseOwner": "Rollout Team / Release Manager",
           "duration": "1-2 weeks",
           "valueAddTime": "65%",
@@ -723,6 +729,7 @@
         "id": 7,
         "name": "Production Deployment & Monitoring",
         "metadata": {
+          "description": "This phase executes the production deployment and closely monitors system performance, user adoption, and incidents during the stabilization period. The Operations Team ensures the system runs smoothly and meets all performance targets.",
           "phaseOwner": "Rollout Team / Operations",
           "duration": "1-2 days (deployment) + 2-4 weeks (stabilization)",
           "valueAddTime": "50% (deployment) / 90% (monitoring)",
@@ -841,6 +848,7 @@
         "id": 8,
         "name": "Post-Implementation Review & Optimization",
         "metadata": {
+          "description": "This phase evaluates the project's success against original objectives, gathers lessons learned, and identifies optimization opportunities. The Product Owner and TPM measure business value achieved and document process improvements for future iterations.",
           "phaseOwner": "Product Owner + TPM",
           "duration": "Ongoing (first review at 2-4 weeks post-launch)",
           "valueAddTime": "60%",

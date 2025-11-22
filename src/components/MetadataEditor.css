@@ -36,7 +36,8 @@
   letter-spacing: 0.5px;
 }
 
-.metadata-field input {
+.metadata-field input,
+.metadata-field textarea {
   padding: 0.75rem;
   border: 1px solid #475569;
   border-radius: 6px;
@@ -44,9 +45,17 @@
   transition: all 0.2s ease;
   background: #1e293b;
   color: #f8fafc;
+  font-family: inherit;
 }
 
-.metadata-field input:focus {
+.metadata-field textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+.metadata-field input:focus,
+.metadata-field textarea:focus {
   outline: none;
   border-color: #10b981;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);

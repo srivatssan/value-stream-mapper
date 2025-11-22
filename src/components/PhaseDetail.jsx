@@ -5,6 +5,19 @@ import './PhaseDetail.css'
 
 function PhaseDetail({ phase, onUpdate }) {
   const [localPhase, setLocalPhase] = useState(phase)
+  const [isEditingTitle, setIsEditingTitle] = useState(false)
+  const [titleInput, setTitleInput] = useState(phase.name)
+
+  const handleTitleChange = () => {
+    if (titleInput.trim() && titleInput !== localPhase.name) {
+      const updated = { ...localPhase, name: titleInput.trim() }
+      setLocalPhase(updated)
+      onUpdate(updated)
+    } else {
+      setTitleInput(localPhase.name)
+    }
+    setIsEditingTitle(false)
+  }
 
   const handleMetadataChange = (updatedMetadata) => {
     const updated = { ...localPhase, metadata: updatedMetadata }
@@ -38,9 +51,27 @@ function PhaseDetail({ phase, onUpdate }) {
 
   return (
     <div className="phase-detail">
-      <h2 className="phase-title">
-        Phase {localPhase.id}: {localPhase.name}
-      </h2>
+      <div className="phase-title-section">
+        <div className="phase-number-badge">Phase {localPhase.id}</div>
+        {isEditingTitle ? (
+          <div className="title-edit-container">
+            <input
+              type="text"
+              className="title-input"
+              value={titleInput}
+              onChange={(e) => setTitleInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleTitleChange()}
+              onBlur={handleTitleChange}
+              autoFocus
+            />
+          </div>
+        ) : (
+          <h2 className="phase-title" onClick={() => setIsEditingTitle(true)}>
+            {localPhase.name}
+            <span className="edit-hint">Click to edit</span>
+          </h2>
+        )}
+      </div>
 
       <MetadataEditor
         metadata={localPhase.metadata}

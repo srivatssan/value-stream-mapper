@@ -399,6 +399,21 @@
   padding-right: 100px;
 }
 
+.phase-description {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid #10b981;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.phase-description p {
+  color: #cbd5e0;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 .stakeholder-tags {
   display: flex;
   flex-direction: column;
