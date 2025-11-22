@@ -108,6 +108,7 @@ function App() {
   }, [valueStreamData.phases])
 
   const activePhase = valueStreamData.phases.find(p => p.id === activePhaseId)
+  const activePhaseIndex = valueStreamData.phases.findIndex(p => p.id === activePhaseId)
 
   return (
     <div className="app">
@@ -192,6 +193,7 @@ function App() {
                 </div>
                 <PhaseDetail
                   phase={activePhase}
+                  phaseNumber={activePhaseIndex + 1}
                   onUpdate={(updatedPhase) => handlePhaseUpdate(activePhaseId, updatedPhase)}
                 />
               </>

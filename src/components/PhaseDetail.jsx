@@ -3,7 +3,7 @@ import MetadataEditor from './MetadataEditor'
 import EditableTable from './EditableTable'
 import './PhaseDetail.css'
 
-function PhaseDetail({ phase, onUpdate }) {
+function PhaseDetail({ phase, phaseNumber, onUpdate }) {
   const [localPhase, setLocalPhase] = useState(phase)
   const [isEditingTitle, setIsEditingTitle] = useState(false)
   const [titleInput, setTitleInput] = useState(phase.name)
@@ -59,7 +59,7 @@ function PhaseDetail({ phase, onUpdate }) {
   return (
     <div className="phase-detail">
       <div className="phase-title-section">
-        <div className="phase-number-badge">Phase {localPhase.id}</div>
+        <div className="phase-number-badge">Phase {phaseNumber}</div>
         {isEditingTitle ? (
           <div className="title-edit-container">
             <input
